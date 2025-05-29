@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true">
+        <processorPath useClasspath="false" />
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ServicesResgsitry" />
+        <module name="Config-server" />
+      </profile>
+      <profile name="Annotation profile for UserApi" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="ApiGate" />
+        <module name="TicketApi" />
+        <module name="BookingApi" />
+        <module name="UserApi" />
+        <module name="FlightApi" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGate" options="-parameters" />
+      <module name="BookingApi" options="-parameters" />
+      <module name="Config-server" options="-parameters" />
+      <module name="FlightApi" options="-parameters" />
+      <module name="ServicesResgsitry" options="-parameters" />
+      <module name="TicketApi" options="-parameters" />
+      <module name="UserApi" options="-parameters" />
+    </option>
+  </component>
+</project>
