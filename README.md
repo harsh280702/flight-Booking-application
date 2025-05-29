@@ -1,34 +1,27 @@
- Flight Booking Application – Project Overview
-The Flight Booking Application is a modular, microservices-based web application designed to manage various aspects of flight booking operations. Developed using Java and Spring Boot, the application demonstrates a scalable architecture suitable for handling user registrations, flight information, bookings, ticketing, and API routing.
+## 📌 Overview
 
-🧱 Project Structure
-The application is organized into several microservices, each responsible for a specific domain:
+The **Flight Booking Application** is a microservices-based system developed using **Java 17** and **Spring Boot**. It is designed to handle end-to-end flight booking operations including user registration, flight search, ticket generation, and booking management. The architecture follows a modular approach, making it scalable and easy to maintain.
 
-ApiGate: Acts as the API Gateway, routing external requests to the appropriate internal services.
+This application demonstrates key enterprise-level concepts such as:
 
-BookingApi: Manages booking-related operations, including creating and retrieving bookings.
+- ✅ Service discovery using **Eureka Server**
+- ✅ Centralized configuration with **Spring Cloud Config**
+- ✅ API Gateway routing via **Spring Cloud Gateway**
+- ✅ Clean separation of concerns using independent services
+- ✅ RESTful communication between services
 
-Config-server: Provides centralized configuration management for all microservices.
+### 🔧 Microservices in the Project
 
-FlightApi: Handles flight-related information, such as adding and retrieving flight details.
+| Microservice       | Description                                           |
+|--------------------|-------------------------------------------------------|
+| `ApiGate`          | Acts as the API Gateway for routing client requests   |
+| `BookingApi`       | Handles all booking-related operations                |
+| `Config-server`    | Centralized configuration management                  |
+| `FlightApi`        | Manages flight details and search functionality       |
+| `ServicesResgsitry`| Eureka Server for service discovery                   |
+| `TicketApi`        | Generates and manages ticket information              |
+| `UserApi`          | Manages user authentication and registration          |
 
-ServicesResgsitry: Functions as the Eureka Server for service discovery, allowing microservices to locate each other.
+Each service is independently deployable and communicates over HTTP using REST APIs.
 
-TicketApi: Manages ticketing operations, including issuing and retrieving tickets.
-
-UserApi: Handles user registration and authentication processes.
-
-⚙️ Technologies Used
-Java 17: Core programming language for developing the application.
-
-Spring Boot: Framework for building stand-alone, production-grade Spring-based applications.
-
-Spring Cloud: Provides tools for building and deploying microservices.
-
-Eureka Server: Service registry for discovering and managing microservices.
-
-Spring Cloud Config Server: Centralized configuration management for distributed systems.
-
-Maven: Build automation and dependency management tool.
-
-REST APIs: Facilitates communication between microservices.
+> This project is ideal for learning Spring Boot microservices architecture, inter-service communication, and cloud-native development using Java.
